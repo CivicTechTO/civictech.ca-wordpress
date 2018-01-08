@@ -8,7 +8,7 @@ Toronto** website on the [Pantheon platform](https://pantheon.io).
 ## About
 
 Our experimental development site is hosted at:
-https://dev-civictechto.pantheonsite.io
+https://dev.toronto.civictech.ca
 
 The Panthon dashboard is here:
 https://dashboard.pantheon.io/sites/2719de9e-f8ef-44d0-9627-bc83e50bd0e2
