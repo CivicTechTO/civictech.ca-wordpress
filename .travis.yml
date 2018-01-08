@@ -52,10 +52,6 @@ install:
   # Dummy install script
   - true
 
-before_script:
-  # Discard any emails Wordpress tries to send.
-  - bin/disable-php-email
-
 script:
   # Dummy script for no tests
   - true
