@@ -64,8 +64,8 @@ after_success:
   #
   # See: http://docs.travis-ci.com/user/encrypting-files/
   #
-  - web/private/scripts/set-up-globals.sh
-  - web/private/scripts/deploy-to-pantheon.sh
+  - bash web/private/scripts/set-up-globals.sh
+  - bash web/private/scripts/deploy-to-pantheon.sh
 
 after_failure:
   - if [ -f $HOME/server.log ] ; then echo "Server log:" && cat $HOME/server.log ; fi
