@@ -22,7 +22,9 @@
   "require": {
     "composer/installers": "^1.3.0",
     "pantheon-systems/quicksilver-pushback": "^1.0",
+    "pantheon-systems/terminus": "^1.6",
     "pantheon-systems/wordpress-composer": "^4.8.2",
+    "patcon/meetup-widgets": "dev-civictechto",
     "roots/wp-password-bcrypt": "^1.0.0",
     "rvtraveller/qs-composer-installer": "^1.1",
     "vlucas/phpdotenv": "^2.4.0",
@@ -32,6 +34,7 @@
     "wpackagist-plugin/google-analyticator": "^6.5.3",
     "wpackagist-plugin/iframe": "4.3",
     "wpackagist-plugin/mailchimp-for-wp": "^4.1.4",
+    "wpackagist-plugin/pantheon-advanced-page-cache": "^0.3.0",
     "wpackagist-plugin/redirection": "^2.7.3",
     "wpackagist-plugin/storify": "1.0.9",
     "wpackagist-plugin/tweet-old-post": "^7.4.8",
@@ -39,10 +42,8 @@
     "wpackagist-plugin/wp-exclude-from-homepage": "1.1.3",
     "wpackagist-plugin/wp-force-http": "0.1.3",
     "wpackagist-plugin/wp-math-captcha": "1.2.7",
-    "wpackagist-plugin/pantheon-advanced-page-cache": "^0.3.0",
     "wpackagist-plugin/wp-native-php-sessions": "^0.6.0",
     "wpackagist-plugin/wp-redis": "^0.7.0",
-    "patcon/meetup-widgets": "dev-civictechto",
     "wpackagist-theme/zerif-lite": "1.8.3.5"
   },
   "require-dev": {
