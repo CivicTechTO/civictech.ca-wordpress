@@ -7,7 +7,7 @@ set -ex
 #==================================================
 
 # Update current apt packages
-apt-get update
+sudo apt-get update
 
 #=========================================================================
 # Commands below this line would not be transferable to a docker container
@@ -27,6 +27,7 @@ composer global require -n "hirak/prestissimo:^0.3"
 # See: https://discuss.circleci.com/t/environment-variable-expansion-in-working-directory/11322
 # See: https://discuss.circleci.com/t/circle-2-0-global-environment-variables/8681
 #=====================================================================================================================
+BASH_ENV=$HOME/.bashrc
 echo 'export PATH=$PATH:$HOME/bin:$HOME/terminus/bin' >> $BASH_ENV
 echo 'export BRANCH=$(echo $CIRCLE_BRANCH | grep -v '"'"'^\(master\|[0-9]\+.x\)$'"'"')' >> $BASH_ENV
 echo 'export PR_ENV=${BRANCH:+pr-$BRANCH}' >> $BASH_ENV

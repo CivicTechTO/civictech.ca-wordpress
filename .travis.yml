@@ -55,6 +55,8 @@ install:
 script:
   # Dummy script for no tests
   - true
+  - web/private/scripts/set-up-globals.sh
+  - web/private/scripts/deploy-to-pantheon.sh
 
 after_success:
   # Place a passphrase-free ssh key so that you can clone and push to your
