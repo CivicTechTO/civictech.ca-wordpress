@@ -55,6 +55,7 @@ install:
 script:
   # Dummy script for no tests
   - true
+  - terminus auth:login --machine-token=$TERMINUS_TOKEN
   - web/private/scripts/set-up-globals.sh
   - web/private/scripts/deploy-to-pantheon.sh
 
