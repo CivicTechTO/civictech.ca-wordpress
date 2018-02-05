@@ -34,7 +34,8 @@
       	printf(
       		'<h5 class="meetup-eyebrow">Next Civic Tech Toronto Hacknight</h5>
           <h2><div class="calendar-icon"></div>%1$s</h2>
-          <h1 class="meetup-speaker">%2$s</h1>
+          <h1 class="meetup-topic" style="margin-bottom: 0;">%6$s</h1>
+          <h3 class="meetup-speaker">%2$s</h3>
           <div class="meetup-descriptor">%3$s</div>
           <div class="meetup-rsvp">
             <a class="btn btn-primary custom-button red-btn" style="margin-right: 20px; margin-left: 0; padding-left: 50px; padding-right: 50px;" href="%4$s">RSVP</a><span class="going-icon"></span><span style="font-weight: 300;">%5$s going</span></div>',
@@ -42,7 +43,8 @@
           $speaker,
           strip_tags($description, '<p>'),
       		esc_url( $event->event_url ),
-          ($event->yes_rsvp_count)
+          ($event->yes_rsvp_count),
+          $topic
       	);
       }
       ?>
