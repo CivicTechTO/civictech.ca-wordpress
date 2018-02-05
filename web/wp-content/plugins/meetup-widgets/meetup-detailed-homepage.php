@@ -1,13 +1,22 @@
 <div class="meetup-hero" style="background-color: #000; color: #FFF;">
 
+  <?php
+    global $events;
+      foreach ( $events as $event ) {
+        $regex = "/.+ #(?<number>\d+)(?: with (?<speaker>[\w &']+))?(?:: (?<topic>.+))?/";
+        preg_match($regex, $event->name, $matches);
+        $hacknight_number = $matches['number'];
+        $speaker = $matches['speaker'];
+        $topic = $matches['topic'];
+      }
+    ?>
+
   <div class="container meetup-details">
 
     <div class="meetup-number">
       <?php
         global $events;
         foreach ( $events as $event ) {
-          $hacknight_number = substr($event->name, strpos($event->name, "#"), 4);
-          $hacknight_number = str_replace("#", "", $hacknight_number);
           echo str_replace(" ", "/", $hacknight_number);
         }
       ?>
@@ -21,7 +30,6 @@
       foreach ( $events as $event ) {
         $venue = $event->venue->name.' '.$event->venue->address_1 . ', ' . $event->venue->city . ', ' . $event->venue->state;
         //PATCON: the var here expects meetup event name to end with "with <speaker or topic>"
-        $speaker = substr($event->name, strpos($event->name, "with ") + 5);
         $description = substr($event->description, 0, strpos($event->description, "About the Hacknight"));
       	printf(
       		'<h5 class="meetup-eyebrow">Next Civic Tech Toronto Hacknight</h5>
