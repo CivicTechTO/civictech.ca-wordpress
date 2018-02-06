@@ -14,8 +14,8 @@
         $regex = "/.+ #(?<number>\d+)(?: with (?<speaker>[\w &']+))?(?:: (?<topic>.+))?/";
         preg_match($regex, $event->name, $matches);
         $hacknight_number = $matches['number'];
-        $title = isset($matches['topic']) ? $matches['topic'] : $matches['speaker'];
-        $subtitle = isset($matches['speaker']) ? $matches['speaker'] : null;
+        $title = array_key_exists('topic', $matches) ? $matches['topic'] : $matches['speaker'];
+        $subtitle = array_key_exists('speaker', $matches) ? $matches['speaker'] : null;
       }
     ?>
 
