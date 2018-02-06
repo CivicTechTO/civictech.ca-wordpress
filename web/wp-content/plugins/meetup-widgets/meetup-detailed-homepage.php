@@ -3,6 +3,14 @@
   <?php
     global $events;
       foreach ( $events as $event ) {
+        //PATCON: the var here expects meetup event name to end with "Blah blah hacknight #123 [with <speaker(s)>][: <topic>]
+        //
+        // For example:
+        //   - Civic Hacknight #123 with Alice Smith & Bob Smith: Some Topic
+        //   - Civic Hacknight #123: Some Topic
+        //   - Civic Hacknight #123 with Alice Smith
+        //
+        // Note: You can test strings via: http://www.phpliveregex.com/
         $regex = "/.+ #(?<number>\d+)(?: with (?<speaker>[\w &']+))?(?:: (?<topic>.+))?/";
         preg_match($regex, $event->name, $matches);
         $hacknight_number = $matches['number'];
@@ -30,7 +38,6 @@
       foreach ( $events as $event ) {
         $venue = $event->venue->name.' '.$event->venue->address_1 . ', ' . $event->venue->city . ', ' . $event->venue->state;
         $description = substr($event->description, 0, strpos($event->description, "About the Hacknight"));
-        //PATCON: the var here expects meetup event name to end with "with <speaker or topic>"
       	printf(
       		'<h5 class="meetup-eyebrow">Next Civic Tech Toronto Hacknight</h5>
           <h2><div class="calendar-icon"></div>%1$s</h2>
