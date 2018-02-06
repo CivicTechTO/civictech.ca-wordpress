@@ -15,7 +15,7 @@
         preg_match($regex, $event->name, $matches);
         $hacknight_number = $matches['number'];
         $title = isset($matches['speaker']) ? $matches['speaker'] : null;
-        if (isset($matches['topic']) {
+        if (isset($matches['topic'])) {
           $subtitle = $title;
           $title = $matches['topic'];
         }
