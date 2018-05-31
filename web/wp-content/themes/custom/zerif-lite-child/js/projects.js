@@ -33,7 +33,7 @@ var app = new Vue({
     },
     coverAttachment: function (card) {
       return card.attachments.filter(function (attachment) {
-        return attachment.id == card.idAttachmentCover
+        return attachment.name.toLowerCase().startsWith('cover image:')
       }).pop()
     },
     attributionAttachment: function (card) {
