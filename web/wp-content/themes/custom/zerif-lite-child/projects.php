@@ -33,7 +33,11 @@ get_header();  ?>
                     </div>
                     <div class="project-content">
                       <h1>
-                        {{ card.name }} <span v-if="projectStageLabel(card)" class="project-phase">{{ projectStageLabel(card).normalized }}</span>
+                        {{ card.name }}
+                        <span v-if="projectStageLabel(card)" class="project-phase">{{ projectStageLabel(card).normalized }}</span>
+                        <a href="http://trello.com/c/{{card.shortLink}}">
+                          <i class="fa fa-pencil" aria-hidden="true" style="float: right; color: #CCCCCC;"></i>
+                        </a>
                       </h1>
                       <p v-html="$options.filters.markdownify(card.desc)" class="m-b-1 project-copy">
                       </p>
