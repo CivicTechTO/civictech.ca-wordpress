@@ -66,7 +66,7 @@ get_header();  ?>
                   <hr class="spacious" />
                 </template>
               </template>
-              <template v-else><h1>Loading...</h1></template>
+              <template v-else><div class="loading"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/loader.gif"></div></template>
 
               <div style="border: 2px solid #ccc; padding: 30px; margin-bottom: 40px;">
                 <h2>Interested in contributing to one of the groups?</h2>
