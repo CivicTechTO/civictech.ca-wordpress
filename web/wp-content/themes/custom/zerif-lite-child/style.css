@@ -240,3 +240,10 @@ a.attribution {
 	font-weight: 300;
 	margin-bottom: 20px;
 }
+
+a.shift-anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}

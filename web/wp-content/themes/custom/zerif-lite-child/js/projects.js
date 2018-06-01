@@ -81,6 +81,16 @@ var app = new Vue({
       value = value.replace(/^chat:/i, '')
       value.trim()
       return value
+    },
+    slugify: function (value) {
+      var slug = value.toString().toLowerCase()
+      slug = slug.replace(/\s+/g, '-')           // Replace spaces with -
+      slug = slug.replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      slug = slug.replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      slug = slug.replace(/^-+/, '')             // Trim - from start of text
+      slug = slug.replace(/-+$/, '');            // Trim - from end of text
+
+      return slug
     }
   }
 })

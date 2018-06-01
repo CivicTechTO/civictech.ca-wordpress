@@ -32,6 +32,7 @@ get_header();  ?>
                       <img v-if="coverAttachment(card)" class="size-thumbnail alignleft wp-image-566" :src="coverAttachment(card).previews[3].url" :alt="coverAttachment(card).name | cleanAttachmentName" :title="coverAttachment(card).name | cleanAttachmentName" />
                     </div>
                     <div class="project-content">
+                      <a v-bind:name="card.name | slugify" class="shift-anchor"></a>
                       <h1>
                         {{ card.name }}
                         <span v-if="projectStageLabel(card)" class="project-phase">{{ projectStageLabel(card).normalized }}</span>
