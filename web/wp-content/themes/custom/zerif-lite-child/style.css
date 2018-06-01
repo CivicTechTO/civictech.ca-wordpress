@@ -247,3 +247,13 @@ a.shift-anchor {
     top: -200px;
     visibility: hidden;
 }
+
+.loading {
+  text-align: center;
+  margin: 100px;
+}
+
+.loading > img {
+  height: 100px;
+}
+}
